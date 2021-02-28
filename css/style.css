@@ -1,0 +1,920 @@
+/*-----------------------------------------------INITIALISATION-----------------------------------------------*/
+body
+{
+	margin: 0;
+	padding: 0;
+}
+p, h1, h2, h3, h4, h5, h6, a, header, footer, section, article
+{
+    font-family: roboto, sans-serif;
+}
+a
+{
+    text-decoration: none;
+}
+ul
+{
+    list-style:none;
+}
+    /*Insertion de police*/
+@font-face
+{
+    font-family: "Foco";
+    src: url('./../libs/fonts/Foco-Bold.otf') format("otf");
+    font-weight: bold;
+}
+/*-----------------------------------------------GENERAL----------------------------------------------*/
+	/*Animation_d'apparition*/
+.fade-in {
+    animation: fadeIn ease 3s;
+    -webkit-animation: fadeIn ease 3s;
+    -moz-animation: fadeIn ease 3s;
+    -o-animation: fadeIn ease 3s;
+    -ms-animation: fadeIn ease 3s;
+}
+@keyframes fadeIn 
+{
+    0% 
+    {
+      	opacity:0;
+    }
+    100% 
+    {
+      	opacity:1;
+    }
+}
+@-moz-keyframes fadeIn 
+{
+    0% 
+    {
+      	opacity:0;
+    }
+    100% 
+    {
+      	opacity:1;
+    }
+}
+@-webkit-keyframes fadeIn 
+{
+    0% 
+    {
+      	opacity:0;
+    }
+    100% 
+    {
+     	opacity:1;
+    }
+  }
+  
+@-o-keyframes fadeIn 
+{
+    0% 
+    {
+      opacity:0;
+    }
+    100% 
+    {
+      opacity:1;
+    }
+}
+@-ms-keyframes fadeIn 
+{
+    0% 
+    {
+      	opacity:0;
+    }
+    100% 
+    {
+      	opacity:1;
+    }
+}
+/****STYLE DES SECTIONS*****/
+    /*-Position des sections-*/
+.sectiongeneral
+{
+    max-width: 75%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+    /*-Style h1 des sections-*/
+.sectiongeneral>h1
+{   
+    color:#96BF9C;
+    font-size:45px;
+}
+    /*-Style h2 des sections-*/
+.sectiongeneral h2
+{
+    color : #54595F;
+    font-size: 36px;
+}
+    /*-Message supplémentaire-*/
+.messageSup
+{
+    font-size:20px;
+    font-family: Noto, serif;
+    font-style: italic;
+}
+    /*-affichage des articles-*/
+.article
+{
+    margin:5%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+    /*-Style div des articles*/
+.article>div
+{
+    max-width: 60%;
+    margin: 20px;
+}
+    /*-Police h6 des articles-*/
+.article h6
+{
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+    /*-Style b des h6-*/
+.article h6>b
+{
+    font-weight: 800;
+}
+    /*-Images des articles-*/
+.article img
+{
+    width: 30%;
+    height: 30%;
+}
+    /*-Style paragraphes-*/
+.sectiongeneral p, .formulaire p
+{
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+}
+    /*-Titre des catégories-*/
+.hautCateg >h5 
+{
+    color:#96BF9C;
+    font-size:40px;
+    margin-bottom: 2%;
+    margin-right: 20%;
+    margin-left:20%;
+}
+    /*-Style des séparations-*/
+hr 
+{
+    margin-left:20%;
+    text-align:left;
+    height: 5px;
+    color: #96BF9C;
+    background-color: #96BF9C;
+    width: 15%; 
+    border: none;
+}
+    /*-Boutons-*/
+.boutons, body .formulaire .boutons   
+{
+    border-radius:12px 0 12px 0;
+    background: #96BF9C;
+    border:none;
+    color:black;
+    font:bold 18px Roboto;
+    padding: 10px;
+    width: 20%;
+    margin-top: 10px;
+    box-shadow:1px 1px 3px #999;
+    text-decoration: none;
+}
+    /*-Style des formulaires-*/
+.formulaire
+{
+    background-color: #F5F5F5;
+    padding:30px;
+    display:flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:50px;
+    margin-bottom:50px;
+    border-radius: 5px;
+    border: 0.5px solid #e8e8e8;
+}
+    /*-Titre des formulaires-*/
+.formulaire h1
+{
+    font-size: 42px;
+    text-align:center;
+    color: #96BF9C;
+}
+    /*-Mise en forme des formulaires-*/
+form
+{
+    justify-content: space-between;
+}
+
+    /*-Suppression de l'input text du titre des initiatives-*/
+#formulaireInit #titreInitiativeAutre
+{
+    display: none;
+}
+    /*-Style des inputs-*/
+form input[type="text"],form input[type="number"],form input[type="tel"],form input[type="email"],form input[type="password"],form input[type="date"],form input[type="file"] ,form textarea, form option, form select
+{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+/*-----------------------------------------------HEADER----------------------------------------------*/
+	/*Disposition du contenu du header*/
+body header
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+	/*Taille du logo du header*/
+#logoHeader>img
+{
+    width: 100px;
+    height: auto;
+    margin: 50px;
+}
+	/*Marge entre l'image et la div*/
+#logoHeader>img+div
+{
+    margin: 40px;
+}
+	/*Style du titre du header*/
+#logoHeader h1
+{
+    color:#96BF9C;
+    font-size:45px;
+}
+	/*Style du slogan du header*/
+#logoHeader h3
+{
+    font-size: 22px;
+    color: #71B1C1;
+}
+	/*Disposition de la partie haute du header*/
+#logoHeader
+{
+    display: flex;
+    align-items: flex-start;
+}
+	/*Disposition du menu du header*/
+#logoHeader+nav>ul
+{
+    display: flex;
+    justify-content: space-around;
+}
+	/*Marge entre les li du menu*/
+#logoHeader+nav>ul li
+{
+    margin: 30px;
+}
+	/*Style de chaque boutons du menu*/
+#logoHeader+nav>ul a
+{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+	/*Style au survol des boutons du menu*/
+#logoHeader+nav>ul a:hover
+{
+    color: #73AB84;
+    transition: 0.3s;
+}
+	/*Style au click des boutons du menu*/
+#logoHeader+nav>ul a:active
+{
+    color: #73AB84;
+}
+
+/*-----------------------------------------------FOOTER----------------------------------------------*/
+	/*Style du footer*/
+body footer
+{
+    display: flex;
+    justify-content: space-around;
+    background-color: #165260;
+    font-size: 18px;
+    width:100%;
+}
+	/*Disposition des divs du footer*/
+footer>div 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+	/*Style des paragraphes du footer*/
+footer>div p
+{
+    margin: 50px;
+    color:white;
+}
+	/*Disposition de la liste du menu*/
+footer ul
+{
+    display: flex;
+    justify-content: space-around;
+}
+	/*Style des mots mis en avant du footer*/
+footer b
+{
+    color:white;
+}
+	/*Style des sections du menu*/
+footer li
+{
+    color:white;
+    margin: 20px;
+}
+	/*Style de chaque boutons du menu*/
+footer li>a
+{
+    color: white;
+}
+
+/*-----------------------------------------------ACCUEIL----------------------------------------------*/
+    /*****PRESENTATION*******/
+        /*Style de la presentation*/
+#presentation
+{
+    text-align: justify;
+    width: 30%;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    font-size: 20px;
+}
+        /*Style de lien*/
+#presentation a
+{
+    color: #73AB84 ;
+}
+        /*Style de la première lettre du premier paragraphe*/
+#presentation>p:first-child::first-letter
+{
+    font-size: 300%;
+    color: #73AB84 ;
+    margin: 10px;
+    font-weight: bold;
+}
+/*-----------------------------------------------INITIATIVES----------------------------------------------*/
+#formIni>p
+{
+    width:75%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#listIni img{
+    margin: 20px;
+}
+.formulaire, #artAvi
+{
+    width: 50%;
+}
+.formulaire label+div
+{
+    display:flex;
+    align-items: center;
+}
+.formulaire p, #artAvi p
+{
+    font-size: 16px;
+}
+/*-----------------------------------------------ACTUALITES----------------------------------------------*/
+    /*-Style h2 article-*/
+#listActu > article > div > h2 
+{
+    font-family: sans-serif;
+}
+    /*-Taille de p des Actualités et du titre du formulaire des initiatives-*/
+#listActu p , #formIni h2
+{
+    font-size:18px;
+}
+/*-----------------------------------------------STATISTIQUES / AVIS----------------------------------------------*/
+    /*-Position formulaire avis-*/
+#avisForm {
+    margin-left:20%;
+    margin-right:20%;
+}
+    /*-Style titre h2 des avis-*/
+#artAvi h2{
+    color:#71B1C1;
+    font-size:20px;
+}
+    /*-Style titre h3 des avis-*/
+#artAvi h3{
+    color:#96BF9C;
+    font-size:25px;
+}
+    /*-Position des avis-*/
+#avisListe, #stat{
+    margin-right:20%;
+    margin-left:20%;
+}
+    /*-Ajout de point à la liste des statistiques-*/
+#stat ul{
+    list-style: circle;
+}
+    /*-Style des balises b des statistiques-*/
+#stat > ul > li > b {
+    color:#96BF9C;
+    font-size:16px;
+}
+    /*-Style des li des statistiques-*/
+#stat > ul > li  {
+    color:black;
+    font-size:18px;
+
+}    
+    /*-Style de la phrase de remerciement-*/
+#stat > strong > h4 {
+    color:black;
+    font-size:20px;
+    font-style: italic;
+}
+/*-----------------------------------------------CONNEXION / INSCRIPTION / RECUPERATION ----------------------------------------------*/
+    /*-Placement des boutons supplémentaires-*/
+#connexion>form>div:last-child
+{
+    margin:15px;
+    margin-right:auto;
+    margin-left:auto;
+}
+/*-----------------------------------------------PROFIL----------------------------------------------*/
+#profil label
+{
+    height: max-content;
+    font-size: 18px;
+}
+#profil h5
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0px 0px 0px 15px;
+}
+#profil a, #modifProfil a, #modifMdp a
+{
+    margin: 20px auto 20px auto;
+    background-color: #96BF9C;
+    color: white;
+    width: max-content;
+}
+#modifProfil>form a:first-of-type
+{
+    width: 100px;
+    text-align: center;
+}
+#profil div, #modifProfil div, #modifMdp div
+{
+    display: flex;
+    justify-content: center;
+    margin: 25px;
+    align-items: center;
+}
+/*------------------------------------------------MENTIONS LEGALES---------------------------------------------*/
+#mention_legal {
+    margin-left:20%;
+    margin-right: 20%;
+}
+#mention_legal>p>strong, #mention_legal>p {
+    color:#7A7A7A;
+    font-size:14px;  
+}
+#mention_legal>p>strong >a {
+    color:#73AB84;
+    font-size:14px;
+}
+/*----------------------------------------------POLITIQUES DE CONFIDENTIALITES-----------------------------*/
+#politique {
+    margin-left:20%;
+    margin-right: 20%;
+}
+#politique>p,#politique>p>strong,#politique>strong  {
+    color:#7A7A7A;
+    font-size:14px;
+}
+#politique>p >a,#politique > h2 {
+    color:#73AB84;
+    font-size:14px;
+}
+
+/*---------------------------------------------------------------------------------RESPONSIVE---------------------------------------------------------------------------*/
+        /***********TELEPHONE***************/
+@media screen and (max-width: 767px){
+    /*----HEADER----*/
+    header
+    {
+        flex-wrap: wrap;
+    }
+    #logoHeader h3
+    {
+        display: none;
+    }
+    #logoHeader
+    {
+        flex-direction: column;
+    }
+    #logoHeader h1
+    {
+        text-align:center;
+        font-size: 30px;
+    }
+    #logoHeader>img+div
+    {
+        margin:0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #logoHeader>img
+    {
+        margin: 20px;
+        margin-left: auto;
+        margin-right:auto;
+        width: 30%;
+    }
+    body #logoHeader+nav>ul a
+    {
+        letter-spacing: 0.5px;
+        font-size: 10px;
+    }
+    body #logoHeader+nav>ul li 
+    {
+        margin: 5px;
+        text-align: center;
+    }
+    #logoHeader+nav>ul
+    {
+        padding: 0;
+    }
+    /*-----FOOTER-----*/
+     body footer
+    {
+        text-align: center;
+        width:100%;
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+    footer li
+    {
+        margin: 10px;
+    }
+    footer>div 
+    {
+        flex-direction: column;
+    }
+    footer b
+    {
+        margin: 15px;
+    }
+    footer>div p{
+        margin: 15px;
+    }
+    /*-----GENERAL-----*/
+    .article img
+    {
+        width: 100%;
+        height: auto;
+    }    
+    .article
+    {
+        align-items: center;
+        margin: 5% 0 5% 0;
+        flex-direction: column;
+    }
+    .sectiongeneral
+    {
+        max-width: 90%;
+    }
+    .sectiongeneral>h6
+    {
+        font-size: 14px;
+    }
+    .sectiongeneral p, .formulaire p
+    {
+        font-size: 18px;
+    }
+    .sectiongeneral h5
+    {
+        font-size: 22px;
+        letter-spacing: 0;
+        margin: 5%
+    }
+    .sectiongeneral h2 
+    {
+        font-size: 20px;
+    }
+    .sectiongeneral>h1
+    {
+        font-size: 25px;
+    }
+    .hautCateg >h5 {
+        color:#96BF9C;
+        font-size:25px;
+        margin-right: 5%;
+        margin-left:5%;
+    }
+    hr {
+        margin-left:5%;
+    }    
+    body .formulaire .boutons, body .boutons
+    {
+        font: bold 16px Roboto;
+        padding: 6px;
+        width: 50%;
+    } 
+    .formulaire, #artAvi
+    {
+        width: 75%;
+    }
+    label
+    {
+        font-size: 18px;
+        margin: 5px;
+    }
+    form input[type="text"],form input[type="number"],form input[type="tel"],form input[type="mail"],form input[type="password"],form input[type="date"],form input[type="file"] ,form textarea, form option, form select
+    {
+       font-size: 12px;
+    }
+    /*-----ACCUEIL-----*/
+        /*-Presentation-*/
+    #presentation
+    {
+        font-size: 14px;
+        width: 80%;
+    }
+    /*-----INITIATIVES-----*/
+    #listIni p 
+    {
+        margin-right: 25px;
+    }
+    #formIni>p
+    {
+        font-size: 18px;
+        width: 90%;
+    }
+    #listIni img{
+        margin: 0px;
+        margin-top: 20px;
+    }
+    /*-----ACTUALITES----*/
+    #listActu 
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top:5%;
+    }
+     #formActu, #avisForm, #stat
+     {
+        margin-left:5%;
+        margin-right: 5%;
+        margin-top:5%;
+    }
+    /*-----AVIS-----*/
+    #artAvi h3
+    {
+        font-size:18px;
+    }
+    #artAvi h2
+    {
+        font-size:16px;
+    }
+    #avisListe 
+    {
+        margin-right:5%;
+        margin-left:5%;
+    }
+    /*------CONNEXION------*/
+    #connexion input[name=checkbox]
+    {
+        width: 12px;
+        height: 12px;
+    }
+    /*----------PROFIL----------*/
+    #profil div:last-of-type, #modifProfil div:last-of-type, #modifMdp div:last-of-type
+    {
+        flex-direction: column;
+    }
+    #profil label
+    {
+        font-size: 14px;
+    }
+    #profil h5
+    {
+        font-size: 14px;
+    }
+    /*-------MENTION LEGALE--------*/
+    #mention_legal 
+    {
+        margin-left:5%;
+        margin-right: 5%;
+    }
+    /*-------POLITIQUE DE CONFIDENTIALITE-----*/
+    #politique 
+    {
+        margin-left:5%;
+        margin-right: 5%;
+    }
+}
+
+     /***********TABLETTE***************/
+@media screen and (min-width: 768px) AND (max-width: 1024px){
+    /*----HEADER----*/
+    header
+    {
+        flex-wrap: wrap;
+    }
+    #logoHeader h3
+    {
+        display: none;
+    }
+    #logoHeader
+    {
+        flex-direction: column;
+    }
+    #logoHeader h1
+    {
+        text-align:center;
+        font-size: 30px;
+    }
+    #logoHeader>img+div
+    {
+        margin:0px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #logoHeader>img
+    {
+        margin: 20px;
+        margin-left: auto;
+        margin-right:auto;
+        width: 30%;
+    }
+    body #logoHeader+nav>ul a
+    {
+        letter-spacing: 0.5px;
+        font-size: 16px;
+    }
+    body #logoHeader+nav>ul li 
+    {
+        margin: 15px;
+        text-align: center;
+    }
+    #logoHeader+nav>ul
+    {
+        padding: 0;
+    }
+    /*-----FOOTER-----*/
+     body footer
+    {
+        text-align: center;
+        width:100%;
+        font-size: 16px;
+        letter-spacing: 0.5px;
+    }
+    footer li
+    {
+        margin: 10px;
+    }
+    footer>div 
+    {
+        flex-direction: column;
+    }
+    footer b
+    {
+        margin: 15px;
+    }
+    footer>div p{
+        margin: 15px;
+    }
+    /*-----GENERAL-----*/
+    .article img
+    {
+        width: 80%;
+        height: auto;
+    }   
+    .article>div {
+        max-width: 80%;
+        margin: 20px;
+    } 
+    .article
+    {
+        margin: 5% 0 5% 0;
+        flex-direction: column;
+    }
+    .sectiongeneral
+    {
+        max-width: 90%;
+    }
+    .sectiongeneral>h6
+    {
+        font-size: 18px;
+    }
+    .sectiongeneral h5
+    {
+        font-size: 22px;
+        letter-spacing: 0;
+        margin: 5%
+    }
+    .sectiongeneral>h1
+    {
+        font-size: 35px;
+    }
+    .hautCateg >h5 {
+        margin-right: 5%;
+        margin-left:5%;
+    }
+    hr {
+        margin-left:5%;
+    }    
+    body .formulaire .boutons, body .boutons
+    {
+        font: bold 16px Roboto;
+        padding: 6px;
+        width: 50%;
+    } 
+    .formulaire, #artAvi
+    {
+        width: 75%;
+    }
+    label
+    {
+        font-size: 18px;
+        margin: 5px;
+    }
+    /*-----ACCUEIL-----*/
+        /*-Presentation-*/
+    #presentation
+    {
+        width: 80%;
+    }
+    /*-----INITIATIVES-----*/
+    #listIni p 
+    {
+        margin-right: 25px;
+    }
+    #formIni>p
+    {
+        width: 90%;
+    }
+    #listIni img{
+        margin: 0px;
+        margin-top: 20px;
+    }
+    /*-----ACTUALITES----*/
+    #listActu 
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top:5%;
+    }
+     #formActu, #avisForm, #stat
+     {
+        margin-left:5%;
+        margin-right: 5%;
+        margin-top:5%;
+    }
+    /*-----AVIS-----*/
+    #avisListe 
+    {
+        margin-right:5%;
+    }
+    /*------CONNEXION------*/
+    #connexion input[name=checkbox]
+    {
+        width: 12px;
+        height: 12px;
+    }
+    /*----------PROFIL----------*/
+    /*-------MENTION LEGALE--------*/
+    #mention_legal 
+    {
+        margin-left:5%;
+        margin-right: 5%;
+    }
+    /*-------POLITIQUE DE CONFIDENTIALITE-----*/
+    #politique 
+    {
+        margin-left:5%;
+        margin-right: 5%;
+    }
+}
+     
